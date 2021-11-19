@@ -1,0 +1,101 @@
+<html>
+  <head>
+ <style>
+    html, body { height: 100%; }
+    body {
+                background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4)),url(/assets/Images/beach.jpg);
+                background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+                
+  overflow: hidden;
+  height: 713px;
+  margin: 0;
+            }
+table{
+                border: 4px solid black;
+            }
+            tr th{
+               
+                border: 4px solid black;
+                text-align: center;
+               
+                padding-top: 12px;
+                padding-bottom: 10px;
+             }
+             th{
+                 font-size:20px;
+             }
+             td{
+                 font-weight:bold;
+                 padding: 10px 20px;
+                 border: 4px solid black;
+                 text-align: center;
+                 color: #000000;
+             }
+           /*  .full-page1{
+               height:713px;
+	        width: 1520px;
+            font-size: 30px;
+            text-align: center;
+            background-position: center; 
+	        background-size: cover;
+	        position: absolute;
+            font-family: sans-serif;
+             }
+             
+      .full-page{
+            height:713px;
+	        width: 1520px;
+            font-size: 30px;
+            text-align: center;
+            color:#ffffff;
+            background: #015871;
+	        background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(/assets/Images/pic.jfif);
+	        background-position: center; 
+	        background-size: cover;
+	        position: absolute;
+            font-family: sans-serif;
+             }
+             */
+             h1{
+               text-align:center;
+             }
+</style>
+   </head>
+   <body>
+      <div class="full-page1">
+          <h1>PLEASE ADD UR DETAILS</h1>
+              <form id="Addvendor">
+              <table border="4" align="center">
+                  <tr>
+                      <th>Name:</th>
+                      <td><input type="text" name="addven.vname" [(ngModel)]="addven.vname" /></td>
+                      </tr>
+                      <tr>
+                          <th>phone no:</th>
+                          <td><input type="text" name="addven.vphno" [(ngModel)]="addven.vphno" /></td>
+                      </tr>
+                      <tr>
+                          <th>UserName</th>
+                          <td> <input type="text" name="addven.vusername" [(ngModel)]="addven.vusername" /></td>
+                      </tr>
+                      <tr>
+                          <th>Password</th>
+                          <td><input type="text" name="addven.vpassword" [(ngModel)]="addven.vpassword" /></td>
+                      </tr>
+                      <tr>
+                          <th>Email</th>
+                          <td><input type="text" name="addven.vemail" [(ngModel)]="addven.vemail" /> </td>
+                          </tr>
+            
+                  <tr>
+                  <th colspan="3"><input type="button" value="Addvendor" (click)="addvendor()" /></th>
+                  </tr>
+                  </table>
+              </form>
+              {{msg}}
+         </div>
+      </body>
+  </html>
+   

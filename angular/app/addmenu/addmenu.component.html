@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <style>
+              @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        align-items: center;
+        background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(/assets/Images/vendor.jpg);
+	        background-position: center; 
+	        background-size: cover;
+        color: #000000;
+        display: grid;
+        font-size: 16px;
+        font-weight: 400;
+        height: 100vh;
+        justify-items: center;
+        font-weight: bold;
+    }
+    table{
+                position: absolute;
+                z-index: 2;
+                left: 60%;
+                top: 64%;
+                transform: translate(-50%,-50%);
+                width: 20%; 
+                height: 50vh;
+                border-collapse: collapse;
+                border-spacing: 0;
+                box-shadow: 0 2px 15px rgba(12, 12, 12, 0.7);
+                border-radius: 12px 12px 0 0;
+                overflow: hidden;
+
+            }
+            .puppy {
+        bottom: -5px;
+        position: absolute;
+        text-align: center;
+        }
+  
+    img {
+        
+        width: 90%;
+        height: 60vh;
+    }
+
+    .signup-container {
+    border: 3px solid #fff;
+    padding: 20px;
+        display: grid;
+        grid-template-areas: "left right";
+        max-width: 900px;
+    }
+    
+    .left-container {
+        
+        overflow: hidden;
+        padding: 40px 0 0 0;
+        position: relative;
+        text-align: center;
+        width: 300px;
+      }
+        
+    .right-container {
+        background: lighten($primary-bg-color, 5%);
+        display: grid;
+        grid-template-areas: "." ".";
+        width: 500px;
+      
+       
+    }
+    .rcontainer {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+    
+    }
+        </style>
+    </head>
+<body>
+    <div class="signup-container">
+        <div class="left-container">
+        <div class="first">
+          <img src="/assets/Images/menu1.jpg">
+        </div>
+        </div>
+        <div class="right-container">
+            <form id="Addmenu">
+        <table border="4" align="center">
+        <tr><th>Name : </th>
+                <td> <input type="text" name="addmen.mitem" [(ngModel)]="addmen.mitem" /></td>
+        </tr>
+        <tr>
+              <th> Price: </th>
+                <td> <input type="text" name="addmen.mprice" [(ngModel)]="addmen.mprice" /> </td></tr>
+        <tr>
+                <th>Calories :</th>
+                <td><input type="text" name="addmen.mcalories" [(ngModel)]="addmen.mcalories" /></td></tr>
+        <tr>
+               <th> Speciality</th>
+                <td><input type="text" name="addmen.mspeciality" [(ngModel)]="addmen.mspeciality" /> </td></tr>
+            <tr>
+                <th colspan="3"> <input type="button" value="Addmenu" (click)="addmenu()" /></th>
+                </tr>
+       
+        </table>
+            </form>
+            {{msg}}</div></div></body></html>
